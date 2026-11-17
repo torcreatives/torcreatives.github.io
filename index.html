@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ToR Creative Studio | Toronto digital growth studio</title>
+<meta name="description" content="ToR Creative Studio is a Toronto digital growth studio for ambitious small businesses. Websites, apps, branding, SEO, campaigns, CRM, and AI assistants, all under one roof. Home of the TorStudio AI Readiness Scanner, Wezella Business OS, With Habesha, and the Habesha in Tech podcast.">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --bg-soft: #141414;
+    --card: #171717;
+    --line: #2b2b2b;
+    --text: #f5f1e8;
+    --muted: #a39e93;
+    --accent: #d4af37;
+    --accent-soft: #241d0d;
+    --gold: #d4af37;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: #d4af37; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+  header.top {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 22px 0;
+  }
+  header.top .name { font-weight: 800; font-size: 1.15rem; letter-spacing: .02em; }
+  header.top .name span { color: var(--accent); }
+  nav a {
+    color: var(--muted); text-decoration: none; margin-left: 22px; font-size: .95rem;
+  }
+  nav a:hover { color: var(--text); }
+  .hero { padding: 64px 0 40px; }
+  .hero .eyebrow {
+    display: inline-block; font-size: .85rem; font-weight: 700; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
+  }
+  .hero h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); line-height: 1.08; letter-spacing: -0.02em; }
+  .hero .role {
+    margin-top: 18px; font-size: 1.25rem; color: var(--text); font-weight: 600;
+  }
+  .hero p.lede { margin-top: 14px; font-size: 1.08rem; color: var(--muted); max-width: 660px; }
+  .cta { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px;
+    padding: 12px 22px; border-radius: 999px;
+    font-weight: 700; font-size: .98rem; text-decoration: none;
+  }
+  .btn-primary { background: var(--accent); color: #0a0a0a; }
+  .btn-primary:hover { background: #e3c25c; }
+  .btn-ghost { border: 1px solid var(--line); color: var(--text); background: var(--bg-soft); }
+  .btn-ghost:hover { border-color: var(--accent); }
+  .quote {
+    margin: 8px 0 56px; padding: 22px 26px; border-left: 4px solid var(--gold);
+    background: var(--bg-soft); border-radius: 0 12px 12px 0;
+    font-size: 1.25rem; font-style: italic; color: var(--text);
+  }
+  section { padding: 0 0 56px; }
+  section h2 { font-size: 1.5rem; letter-spacing: -0.01em; margin-bottom: 6px; }
+  section h2 .n { color: var(--accent); margin-right: 8px; }
+  section .sub { color: var(--muted); margin-bottom: 20px; }
+  .icon {
+    width: 22px; height: 22px; stroke: var(--gold); fill: none;
+    stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none;
+  }
+  .icon-sm { width: 18px; height: 18px; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 20px 22px;
+  }
+  .card h3 { font-size: 1.05rem; margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+  .card p { color: var(--muted); font-size: .97rem; }
+  .card ul { color: var(--muted); font-size: .97rem; padding-left: 18px; }
+  .card ul li { margin-bottom: 6px; }
+  .card ul li::marker { color: var(--gold); }
+  .card .tag { color: var(--gold); font-weight: 700; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; display: block; margin-bottom: 8px; }
+  .card .links { margin-top: 14px; }
+  .card .links a { font-weight: 700; text-decoration: none; }
+  .work {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 20px 22px; margin-bottom: 12px;
+  }
+  .work h3 { font-size: 1.05rem; }
+  .work .meta { color: var(--gold); font-weight: 700; font-size: .92rem; margin: 2px 0 8px; }
+  .work p { color: var(--muted); font-size: .97rem; }
+  .work .links { margin-top: 10px; }
+  .work .links a { font-weight: 700; text-decoration: none; }
+  .connect p { color: var(--muted); margin-bottom: 20px; max-width: 600px; }
+  footer {
+    border-top: 1px solid var(--line); padding: 26px 0 40px;
+    color: var(--muted); font-size: .92rem;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--text); }
+  @media (max-width: 640px) {
+    .cards { grid-template-columns: 1fr; }
+    nav a { margin-left: 14px; }
+    .hero { padding-top: 40px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="name">ToR<span>.</span></div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#work">Work</a>
+      <a href="#connect">Connect</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <span class="eyebrow">Toronto &middot; GTA &middot; Canada</span>
+    <h1>ToR Creative Studio</h1>
+    <p class="role">Your reputation is strong. Your website should be too.</p>
+    <p class="lede">We are a Toronto digital growth studio for ambitious small businesses. Websites, apps, branding, SEO, campaigns, CRM, and AI assistants, all under one roof. Most sites launch in 2 to 3 weeks, with a date up front.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://torcreatives.com">Visit torcreatives.com</a>
+      <a class="btn btn-ghost" href="https://torstudio.dev">Run a free AI scan</a>
+    </div>
+  </div>
+
+  <div class="quote">Our heart is with Habesha and Black businesses, and our craft serves every ambitious small business across Toronto and the GTA.</div>
+
+  <section id="services">
+    <h2><span class="n">01</span>What we do</h2>
+    <p class="sub">Everything a small business needs to grow online, from one Toronto team.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>
+          <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          Websites
+        </h3>
+        <p>Modern, conversion focused websites that turn visitors into customers. Fast, mobile first, and ready to rank on Google from day one.</p>
+      </div>
+      <div class="card">
+        <h3>
+          <svg class="icon" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+          App development
+        </h3>
+        <p>Custom web and mobile apps built around your business. Booking flows, customer portals, and internal tools, designed, built, and launched by one team.</p>
+      </div>
+      <div class="card">
+        <h3>
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          SEO and agent readiness
+        </h3>
+        <p>Be found on Google and recommended by AI assistants like ChatGPT, Copilot, and Gemini. Local SEO plus AI search visibility, tuned for Toronto and GTA searches.</p>
+      </div>
+      <div class="card">
+        <h3>
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+          Brand, content and campaigns
+        </h3>
+        <p>A brand people remember, content that keeps working, and campaigns that bring customers in. Visual identity, messaging, and content systems, one story everywhere.</p>
+      </div>
+      <div class="card">
+        <h3>
+          <svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          CRM, booking and AI assistants
+        </h3>
+        <p>Online booking, CRM lead capture, and an AI assistant that answers visitors while you work. Powered by our own Wezella Business OS, so no lead goes cold.</p>
+      </div>
+      <div class="card">
+        <h3>
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Digital audits and growth support
+        </h3>
+        <p>An outside perspective when you know something is off but need help finding the highest impact fix. Start with a free AI scan and see exactly where you stand.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2><span class="n">02</span>Products</h2>
+    <p class="sub">Tools we built for small businesses, and use ourselves every day.</p>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">TorStudio</span>
+        <h3>
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 20l-2.2-6.6L3 11l6.8-2.4z"/></svg>
+          AI Readiness Scanner
+        </h3>
+        <p>A free website scan that grades any site out of 100 across 80 checks for SEO and GEO. It shows what is holding the site back in search and in AI answers, with a fix for each failure. Free forever, no sign-up.</p>
+        <p class="links"><a href="https://torstudio.dev">torstudio.dev &rarr;</a></p>
+      </div>
+      <div class="card">
+        <span class="tag">Wezella</span>
+        <h3>
+          <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          Business OS
+        </h3>
+        <p>Your complete Business OS: an AI-ready website, CRM, AI chatbot, CMS, and admin console, installed for you in 2 weeks. Edit every word yourself in English, Amharic, and Tigrinya. Launch from $1,199 setup plus $75 a month.</p>
+        <p class="links"><a href="https://wezella.com">wezella.com &rarr;</a></p>
+      </div>
+      <div class="card">
+        <span class="tag">With Habesha</span>
+        <h3>
+          <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Business directory
+        </h3>
+        <p>Canada&rsquo;s verified Habesha and African business directory. 110 verified businesses across Canada, mapped for visitors, on the website and in the mobile app. The Wezella Assistant answers visitors on both.</p>
+        <p class="links"><a href="https://withhabesha.com">withhabesha.com &rarr;</a></p>
+      </div>
+      <div class="card">
+        <span class="tag">Habesha in Tech</span>
+        <h3>
+          <svg class="icon" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+          Podcast
+        </h3>
+        <p>Founded and hosted by Tef Kassa. Conversations with Ethiopian and Eritrean professionals getting into tech, in Amharic and English, about community, representation, and access to tech.</p>
+        <p class="links"><a href="https://open.spotify.com/show/habeshaInTech">Listen on Spotify &rarr;</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2><span class="n">03</span>Selected work</h2>
+    <p class="sub">Live now, built and run by the studio.</p>
+    <div class="work">
+      <h3>Toronto Evangelical Believers&rsquo; Iddir</h3>
+      <div class="meta">Wezella for Nonprofits &middot; Live</div>
+      <p>A mutual-aid community of 300+ members across Toronto and the GTA runs on Wezella for Nonprofits. We built the public website and the console behind it: member and submission management, an 11-role board system, and a treasurer, accountant, and chair money flow.</p>
+      <p class="links"><a href="https://tebiddir.org">tebiddir.org &rarr;</a></p>
+    </div>
+    <div class="work">
+      <h3>Here &amp; There Coffee</h3>
+      <div class="meta">Website &middot; Live</div>
+      <p>A Toronto coffee shop&rsquo;s website. The studio rebuilt its email and admin, and the site stays fast and easy to update.</p>
+      <p class="links"><a href="https://heretherecoffee.com">heretherecoffee.com &rarr;</a></p>
+    </div>
+    <div class="work">
+      <h3>ToR Creative Studio</h3>
+      <div class="meta">Our own site &middot; Live</div>
+      <p>The studio&rsquo;s own website runs on the same system we install for clients, and the Wezella Assistant answers visitors on it around the clock.</p>
+      <p class="links"><a href="https://torcreatives.com">torcreatives.com &rarr;</a></p>
+    </div>
+  </section>
+
+  <section id="connect" class="connect">
+    <h2><span class="n">04</span>Connect</h2>
+    <p>Book a free consultation through the contact page. We talk through your goals, tell you honestly what you need and what you do not, then send a clear proposal with pricing.</p>
+    <div class="cta" style="margin-top:0">
+      <a class="btn btn-primary" href="https://torcreatives.com">Visit torcreatives.com</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/company/torcreatives">LinkedIn</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/torcreatives">Instagram</a>
+      <a class="btn btn-ghost" href="https://x.com/torcreatives">X</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>ToR Creative Studio &middot; Toronto</span>
+    <span><a href="https://torcreatives.com">torcreatives.com</a> &nbsp;&middot;&nbsp; <a href="tel:+16479459479">+1 (647) 945-9479</a></span>
+  </footer>
+
+</div>
+</body>
+</html>

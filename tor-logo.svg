@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
+  <defs>
+    <clipPath id="twL"><rect x="0" y="0" width="800" height="1100"/></clipPath>
+    <clipPath id="twR"><rect x="800" y="0" width="800" height="1100"/></clipPath>
+  </defs>
+  <g transform="translate(40,253.5) scale(0.7)">
+  <polygon points="800,60 60,930 800,930" fill="#C9A24B"/>
+  <polygon points="800,60 1540,930 800,930" fill="#0C3B2E"/>
+  <path d="M800,60 L60,930 L800,930" fill="none" stroke="#0C3B2E" stroke-width="16" stroke-linejoin="miter"/>
+  <path d="M800,60 L1540,930 L800,930" fill="none" stroke="#C9A24B" stroke-width="16" stroke-linejoin="miter"/>
+  <!-- apex miter wedges: the two open border paths meet at the tip with butt caps
+       perpendicular to each slope, leaving a notched wedge; these close it so the
+       green/gold split lands exactly on the centerline in a sharp point -->
+  <polygon points="793.9,54.8 800,47.6 800,60" fill="#0C3B2E"/>
+  <polygon points="806.1,54.8 800,47.6 800,60" fill="#C9A24B"/>
+  <g clip-path="url(#twL)"><g transform="translate(638,105) scale(0.81)" fill="#0C3B2E">
+      <polygon points="197,10 203,10 207,205 193,205"/>
+      <circle cx="200" cy="8" r="5"/>
+      <g transform="translate(200,336) scale(1.18) translate(-200,-336)">
+        <ellipse cx="200" cy="225" rx="30" ry="26"/>
+        <rect x="192" y="245" width="16" height="38"/>
+        <path d="M148,300 C148,285 160,278 175,278 L225,278 C240,278 252,285 252,300 C252,340 235,375 218,395 L182,395 C165,375 148,340 148,300 Z"/>
+        <polygon points="184,395 216,395 212,415 188,415"/>
+      </g>
+      <g transform="translate(200,0) scale(1.12,1) translate(-200,0)">
+        <polygon points="188,415 212,415 248,985 152,985"/>
+        <polygon points="152,985 248,985 258,1000 142,1000"/>
+      </g>
+  </g></g>
+  <g clip-path="url(#twR)"><g transform="translate(638,105) scale(0.81)" fill="#C9A24B">
+      <polygon points="197,10 203,10 207,205 193,205"/>
+      <circle cx="200" cy="8" r="5"/>
+      <g transform="translate(200,336) scale(1.18) translate(-200,-336)">
+        <ellipse cx="200" cy="225" rx="30" ry="26"/>
+        <rect x="192" y="245" width="16" height="38"/>
+        <path d="M148,300 C148,285 160,278 175,278 L225,278 C240,278 252,285 252,300 C252,340 235,375 218,395 L182,395 C165,375 148,340 148,300 Z"/>
+        <polygon points="184,395 216,395 212,415 188,415"/>
+      </g>
+      <g transform="translate(200,0) scale(1.12,1) translate(-200,0)">
+        <polygon points="188,415 212,415 248,985 152,985"/>
+        <polygon points="152,985 248,985 258,1000 142,1000"/>
+      </g>
+  </g></g>
+  <text x="820" y="790" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="380" letter-spacing="40" fill="#FFFFFF">ToR</text>
+  </g>
+</svg>
